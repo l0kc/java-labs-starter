@@ -22,13 +22,14 @@ class CourseToolkitTest {
     }
     @Test
     void returnsTrueForZero() {
-        boolean result = CourseToolkit.isEven(0);
+        boolean result = CourseToolkit.isZero(0);
+
 
         assertTrue(result);
     }
     @Test
     void returnsFalseForNotZero() {
-        boolean result = CourseToolkit.isEven(7);
+        boolean result = CourseToolkit.isZero(7);
 
         assertFalse(result);
     }
