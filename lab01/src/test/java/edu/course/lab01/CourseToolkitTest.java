@@ -20,4 +20,18 @@ class CourseToolkitTest {
 
         assertFalse(result);
     }
+    @Test
+    void returnsTrueForZero() {
+        boolean result = CourseToolkit.isZero(0);
+
+
+        assertTrue(result);
+    }
+    @Test
+    void returnsFalseForNotZero() {
+        boolean result = CourseToolkit.isZero(7);
+
+        assertFalse(result);
+    }
+
 }
