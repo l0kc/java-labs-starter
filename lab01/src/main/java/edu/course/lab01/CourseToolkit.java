@@ -1,6 +1,5 @@
 package edu.course.lab01;
 
-import java.util.Arrays;
 
 /**
  * Небольшие методы для первой лабораторной работы.
@@ -39,20 +38,26 @@ public final class CourseToolkit {
     }
 
     public static boolean isPalindrome(String text) {
+        int res = 0;
+        String texT = text;
         if (text == null) {
             throw new IllegalArgumentException("Not null");
         }
-        StringBuilder strg = new StringBuilder(text);
-        strg.reverse();
-        return strg.toString().equals(text);
+        for (int i = 0; i <= text.length() -1; i++){
+            if (text.charAt(i) == texT.charAt(i)){
+                res++;
+            }
+        }
+        return res == text.length();
     }
-
     public static double average(int[] arr) {
-        // Сначала проверяем на null, потом на длину!
+        int sum = 0;
         if (arr == null || arr.length == 0) {
             throw new IllegalArgumentException("not empty(nolь)");
         }
-        int sum = Arrays.stream(arr).sum();
-        return (double) sum / Arrays.stream(arr).count();
+        for(int i = 0; i <= arr.length - 1; i++){
+            sum += arr[i];
+        }
+        return (double) sum / arr.length;
     }
 }
