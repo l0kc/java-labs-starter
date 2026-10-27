@@ -16,13 +16,13 @@ public final class BankAccount {
 
     void withdraw(int amount) {
         if (amount <= 0 || amount >= this.getBalance()) {
-            throw new IllegalArgumentException("poshel...");
+            throw new IllegalArgumentException("смерть в нищите");
         }
         this.balance -= amount;
     }
     void deposit(int amount){
         if (amount < 0){
-            throw new IllegalArgumentException("poshel..");
+            throw new IllegalArgumentException("смерть в нищите");
         }
         this.balance += amount;
     }
