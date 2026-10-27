@@ -17,6 +17,21 @@ class ProjectTaskTest {
     }
 
     @Test
+    void getEstHours() {
+        ProjectTask task = new ProjectTask("TASK-8", "Трудоемкость", TaskStatus.OPEN, 5);
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            task.IncEstHours(0);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            task.IncEstHours(-2);
+        });
+
+        assertEquals(5, task.getEstHours());
+    }
+
+    @Test
     void isCompleted() {
     }
 
@@ -34,20 +49,5 @@ class ProjectTaskTest {
 
     @Test
     void getStatus() {
-    }
-
-    @Test
-    void getEstHours() {
-        ProjectTask task = new ProjectTask("TASK-8", "Трудоемкость", TaskStatus.OPEN, 5);
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            task.IncEstHours(0);
-        });
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            task.IncEstHours(-2);
-        });
-
-        assertEquals(5, task.getEstHours());
     }
     }
