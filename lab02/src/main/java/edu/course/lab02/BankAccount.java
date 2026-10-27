@@ -14,18 +14,16 @@ public final class BankAccount {
         return this.balance;
         }
 
-    int withdraw(int amount) {
+    void withdraw(int amount) {
         if (amount <= 0 || amount >= this.getBalance()) {
             throw new IllegalArgumentException("poshel naxui");
         }
         this.balance -= amount;
-        return balance;
     }
-    int deposit(int amount){
+    void deposit(int amount){
         if (amount < 0){
             throw new IllegalArgumentException("poshel naxui");
         }
         this.balance += amount;
-        return balance;
     }
 }

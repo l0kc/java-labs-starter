@@ -1,7 +1,6 @@
 package edu.course.lab02;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProjectTaskTest {
@@ -41,17 +40,14 @@ class ProjectTaskTest {
     void getEstHours() {
         ProjectTask task = new ProjectTask("TASK-8", "Трудоемкость", TaskStatus.OPEN, 5);
 
-        // Увеличение на ноль или отрицательное число должно вызывать исключение
         assertThrows(IllegalArgumentException.class, () -> {
-            ProjectTask.IncEstHours(0);
+            task.IncEstHours(0);
         });
 
         assertThrows(IllegalArgumentException.class, () -> {
-            ProjectTask.IncEstHours(-2);
+            task.IncEstHours(-2);
         });
 
-        // Убедимся, что часы не изменились после неудачных попыток
         assertEquals(5, task.getEstHours());
     }
     }
-}

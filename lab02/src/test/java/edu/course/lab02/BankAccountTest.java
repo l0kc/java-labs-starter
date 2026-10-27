@@ -38,9 +38,3 @@ class BankAccountTest {
         assertEquals(500, account.getBalance());
     }
 }
-//class ProjectTask{
-//    @Test
-//    void main{
-//        assertTrue(true);
-//    }
-//}
