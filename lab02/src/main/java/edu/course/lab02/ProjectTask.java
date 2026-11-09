@@ -26,12 +26,9 @@ public class ProjectTask {
         this.estimatedHours = estimatedHours;
     }
 
-    public void changeStatus() {
-        if (getStatus() == TaskStatus.OPEN){
-            this.status = TaskStatus.IN_PROGRESS;
-        }
-        if (getStatus() == TaskStatus.IN_PROGRESS){
-            this.status = TaskStatus.DONE;
+    public void changeStatus(TaskStatus newStatus) {
+        if (newStatus == null) {
+            throw new IllegalArgumentException("Новый статус не может быть null.");
         }
     }
 
