@@ -37,13 +37,10 @@ public class ProjectTask {
         return this.status == TaskStatus.DONE;
     }
 
-
-    public void IncEstHours(int hours) {
-        if (hours <= 0) {
-            throw new IllegalArgumentException("Окак");
-        }
-        while (getStatus() != TaskStatus.DONE){
-            this.estimatedHours += hours;}
+    public void IncEstHours(int extraHours) {
+        if (extraHours <= 0) {
+            throw new IllegalArgumentException("Прикольное время...");
+        }this.estimatedHours += extraHours;
     }
 
     public String getId() {
