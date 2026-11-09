@@ -1,7 +1,5 @@
 package edu.course.lab02;
 
-import java.lang.classfile.constantpool.NameAndTypeEntry;
-
 public class ProjectTask {
     private final String id;
     private final String title;
