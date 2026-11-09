@@ -30,6 +30,7 @@ public class ProjectTask {
         if (newStatus == null) {
             throw new IllegalArgumentException("Новый статус не может быть null.");
         }
+        this.status = newStatus;
     }
 
     public boolean isCompleted() {
