@@ -1,8 +1,6 @@
 package edu.course.lab03;
 
-/**
- * Политика без скидки: возвращает исходную цену.
- */
+
 public class NoDiscount implements DiscountPolicy {
 
     @Override
