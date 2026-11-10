@@ -1,9 +1,6 @@
 package edu.course.lab01;
 
 
-/**
- * Небольшие методы для первой лабораторной работы.
- */
 public final class CourseToolkit {
 
     private CourseToolkit() {
@@ -37,18 +34,15 @@ public final class CourseToolkit {
         return s <= 2;
     }
 
-    public static boolean isPalindrome(String text) {
-        int res = 0;
-        String texT = text;
-        if (text == null) {
-            throw new IllegalArgumentException("Not null");
+    public static boolean isPalindrome(String text){
+        if (text == null){
+            throw new IllegalArgumentException("Строка не может быть null");
         }
-        for (int i = 0; i <= text.length() -1; i++){
-            if (text.charAt(i) == texT.charAt(i)){
-                res++;
-            }
+        else {
+            String lowerText = text.toLowerCase().replace(" ", "");
+            String reversedText = new StringBuilder(lowerText).reverse().toString();
+            return lowerText.equals(reversedText);
         }
-        return res == text.length();
     }
     public static double average(int[] arr) {
         int sum = 0;
