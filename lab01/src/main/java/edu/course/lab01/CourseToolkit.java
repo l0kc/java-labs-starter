@@ -22,7 +22,7 @@ public final class CourseToolkit {
             return true;
         }
         int s = 0;
-        if (Math.pow(Math.sqrt((double) number), 2) == number) {
+        if (Math.pow(Math.sqrt(number), 2) == number) {
             return false;
         }
         while (number > 0) {
