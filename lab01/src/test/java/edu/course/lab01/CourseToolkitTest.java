@@ -43,7 +43,7 @@ class CourseToolkitTest {
 
     @Test
     void returnsFalseForNonPalindrome() {
-        assertFalse(CourseToolkit.isPalindrome("hello"));
+        assertFalse(CourseToolkit.isPalindrome("hello WoRld"));
     }
 
     @Test
