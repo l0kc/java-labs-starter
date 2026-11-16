@@ -16,7 +16,7 @@ public class ProjectTask {
         if (status == null) {
             throw new IllegalArgumentException("Что со мной?");
         }
-        if (estimatedHours < 0) {
+        if (estimatedHours <= 0) {
             throw new IllegalArgumentException("Что за бизнес с....");
         }
 
